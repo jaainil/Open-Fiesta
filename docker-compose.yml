@@ -7,6 +7,11 @@ services:
       - '3000:3000'
     environment:
       - NODE_ENV=production
+      # Add your API keys here or use a .env file
+      # - OPENROUTER_API_KEY=your_openrouter_key_here
+      # - GEMINI_API_KEY=your_gemini_key_here
+      # - UNSTABLE_INFERENCE_API_KEY=your_unstable_inference_key_here
+      # - OLLAMA_URL=http://host.docker.internal:11434
     restart: unless-stopped
 
   # Development version with hot reload
@@ -21,4 +26,9 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
+      # Add your API keys here or use a .env file
+      # - OPENROUTER_API_KEY=your_openrouter_key_here
+      # - GEMINI_API_KEY=your_gemini_key_here
+      # - UNSTABLE_INFERENCE_API_KEY=your_unstable_inference_key_here
+      # - OLLAMA_URL=http://host.docker.internal:11434
     command: npm run dev
