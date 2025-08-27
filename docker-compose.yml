@@ -2,9 +2,7 @@ version: '3.8'
 
 services:
   ai_fiesta:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/jaainil/open-fiesta-ghcr:latest
     ports:
       - '3000:3000'
     environment:
